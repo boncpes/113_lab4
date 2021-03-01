@@ -3,23 +3,15 @@
 int main()
 {
     int i,k;
-    char w[200],b[20];
+    char w[200];
     scanf("%200[^\n]s",w);
-    b[0]=w[0];
-    k=0;
+    printf("%c",w[0]);
     for(i=1; i<strlen(w); i++)
     {
-        if(b[k]!=w[i])
+        if(w[i-1]!=w[i])
         {
-            k++;
-            b[k]=w[i];
-        }
-        if(i==strlen(w)-1)
-        {
-            break;
+            printf("%c",w[i]);
         }
     }
-    printf("%s",b);
-
     return 0;
 }
