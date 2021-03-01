@@ -6,13 +6,13 @@ int main()
     int i,j,k,p=0;
     char c[11][4]= {"i","of","the","on","at","for","with","a","an","in","and"};
     char w[1000],b[20];
-    scanf("%s[^\n]",w);
-    j=0;
-    char *token = strtok(w," ");
-    while(token != NULL)
+    char * pch;
+    scanf("%[^\n]s",w);
+    pch = strtok(w," ");
+    while (pch != NULL)
     {
-         printf("%s\n",token);
-         token = strtok(NULL," ");
+        printf ("%s\n",b[0]);
+        pch = strtok (NULL, " ");
     }
     return 0;
 }
