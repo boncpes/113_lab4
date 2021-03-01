@@ -7,7 +7,7 @@ int main()
     char c[11][4]= {"i","of","the","on","at","for","with","a","an","in","and"};
     char w[1000],b[20];
     char * pch;
-    scanf("%1000[^\n]s",w);
+    scanf("%[^\n]s",w);
     pch = strtok(w," ");
     while (pch != NULL)
     {
