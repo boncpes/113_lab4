@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,j,k,y,p,count,t,min,max;
+    int n,i,j,k,y,p,count,t,min,max,q;
     scanf("%d",&n);
     k=n;
     for(i=n; i>0; i--)
@@ -13,6 +13,7 @@ int main()
             break;
         }
     }
+    printf("%d %d\n",n,y);
     int a[k][3],b[y],local[2];
     for(i=0; i<k; i++)
     {
@@ -22,8 +23,8 @@ int main()
         }
     }
     t=0;
-    y=0;
-    count=1;
+    q=0;
+    count=0;
     for(i=0; i<n; i++)
     {
         for(j=0; j<3; j++)
@@ -39,17 +40,22 @@ int main()
             else if(j==2)
             {
                 t+=a[i][j]*1;
-                count++;
             }
         }
+        count++;
         if(count==3)
         {
-            b[y]=t;
-            y++;
+            b[q]=t;
+            q++;
             t=0;
-            count=1;
+            count=0;
         }
     }
+    for(i=0; i<y; i++)
+    {
+        printf("%d ",b[i]);
+    }
+    printf("\n");
     for(i=0; i<y; i++)
     {
         if(i==0)
