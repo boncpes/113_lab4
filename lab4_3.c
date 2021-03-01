@@ -7,12 +7,16 @@ int main()
     scanf(" %200[^\n]s",w);
     b[0]=w[0];
     k=0;
-    for(i=1; i<strlen(w); i++)
+    for(i=1; i<strlen(w)-1; i++)
     {
+        if(w[i]==0)
+        {
+            break;
+        }
         if(b[k]!=w[i])
         {
-            b[k+1]=w[i];
             k++;
+            b[k]=w[i];
         }
     }
     printf("%s",b);
