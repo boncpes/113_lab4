@@ -23,10 +23,9 @@ int main()
     }
     t=0;
     y=0;
-    count=2;
+    count=1;
     for(i=0; i<n; i++)
     {
-
         for(j=0; j<3; j++)
         {
             if(j==0)
@@ -40,16 +39,16 @@ int main()
             else if(j==2)
             {
                 t+=a[i][j]*1;
+                count++;
             }
         }
-        if(count==0)
+        if(count==3)
         {
             b[y]=t;
             y++;
             t=0;
-            count=3;
+            count=1;
         }
-        count--;
     }
     for(i=0; i<y; i++)
     {
@@ -75,6 +74,5 @@ int main()
     {
         printf("%d ",local[i]+1);
     }
-
     return 0;
 }

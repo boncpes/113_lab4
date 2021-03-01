@@ -4,7 +4,7 @@ int main()
 {
     int i,k;
     char w[200],b[20];
-    scanf(" %200[^\n]s",w);
+    scanf("%200[^\n]s",w);
     b[0]=w[0];
     k=0;
     for(i=1; i<strlen(w); i++)
@@ -13,6 +13,10 @@ int main()
         {
             k++;
             b[k]=w[i];
+        }
+        if(i==strlen(w)-1)
+        {
+            break;
         }
     }
     printf("%s",b);
