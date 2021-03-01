@@ -6,7 +6,7 @@ int main()
     int i,j,k,p=0;
     char c[11][4]= {"i","of","the","on","at","for","with","a","an","in","and"};
     char w[1000],b[20];
-    scanf("%1000[^\n]s",w);
+    scanf("%1000s[^\n]",w);
     j=0;
     for(i=0; i<strlen(w); i++)
     {
