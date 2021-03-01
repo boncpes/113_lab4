@@ -12,23 +12,25 @@ int main()
     }
     for(i=0; i<n; i++)
     {
+        g[0]=1;
+        g[1]=2;
+        g[2]=3;
+        g[3]=4;
         for(j=0; j<strlen(w[i]); j++)
         {
-            switch(w[i][j])
-            {
-            case 'A':
+            if(w[i][j]=='A')
             {
                 t=g[1];
                 g[1]=g[2];
                 g[2]=t;
             }
-            case 'B':
+            else if(w[i][j]=='B')
             {
                 t=g[0];
                 g[0]=g[3];
                 g[3]=t;
             }
-            case 'C':
+            else if(w[i][j]=='C')
             {
                 t=g[0];
                 g[0]=g[2];
@@ -37,16 +39,16 @@ int main()
                 g[1]=g[3];
                 g[3]=t;
             }
-            case 'D':
+            else if(w[i][j]=='D')
             {
                 t=g[0];
-                g[1]=g[0];
+                g[0]=g[1];
                 g[1]=t;
                 t=g[2];
                 g[2]=g[3];
                 g[3]=t;
             }
-             case 'E':
+            else if(w[i][j]=='E')
             {
                 t=g[0];
                 g[0]=g[3];
@@ -55,15 +57,13 @@ int main()
                 g[1]=g[2];
                 g[2]=t;
             }
-            }
         }
-    }
-    printf("1\n");
-    for(i=0;i<4;i++)
-    {
-        if(g[i]==1)
+        for(k=0; k<4; k++)
         {
-            printf("%d",i+1);
+            if(g[k]==1)
+            {
+                printf("%d\n",k+1);
+            }
         }
     }
     return 0;
